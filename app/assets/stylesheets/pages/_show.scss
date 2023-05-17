@@ -1,0 +1,13 @@
+.product{
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-between;
+  img{
+    width: 40%;
+    border-radius: 5px;
+  }
+}
+
+.product-description{
+  width: 50%;
+}

@@ -1,5 +1,15 @@
-<h2><%= @product.name %></h2>
+<div class="container">
 
-<%= image_tag @product.photo, width: 500, height:500 %>
+  <div class="product">
+    <%= image_tag @product.photo%>
+    <div class='product-description'>
+      <h2><%= @product.name %></h2>
+      <p><%= @product.description%></p>
+      <h4><%= @product.price.to_s.split('.')[1] == '0' ? @product.price.to_i : @product.price %> CAD</h4>
+    </div>
+  </div>
+<br>
+<br>
 <br>
 <%= link_to 'retour', products_path %>
+</div>

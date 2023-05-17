@@ -1,0 +1,63 @@
+// banner
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+// Products section
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+a:hover{
+  color:black;
+  .price{
+    --underline-width: 100%;
+  }
+}
+
+.price{
+  background: linear-gradient(currentColor 0 0)
+  bottom left/
+  var(--underline-width, 0%) 0.1em
+  no-repeat;
+color: black;
+display: inline-block;
+text-decoration: none;
+transition: background-size 0.3s;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.grid-item{
+  text-align: start;
+  img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+  }
+}
