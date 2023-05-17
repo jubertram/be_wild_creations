@@ -10,8 +10,19 @@ a {
 a:hover{
   color:black;
   .price{
-    text-decoration: underline;
+    --underline-width: 100%;
   }
+}
+
+.price{
+  background: linear-gradient(currentColor 0 0)
+  bottom left/
+  var(--underline-width, 0%) 0.1em
+  no-repeat;
+color: black;
+display: inline-block;
+text-decoration: none;
+transition: background-size 0.3s;
 }
 
 .grid-container{
