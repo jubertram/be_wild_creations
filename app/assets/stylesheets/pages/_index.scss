@@ -1,2 +1,32 @@
 // Import page-specific CSS files here.
 @import "home";
+
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+a:hover{
+  color:black;
+  .price{
+    text-decoration: underline;
+  }
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.grid-item{
+  text-align: start;
+  img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+  }
+}
