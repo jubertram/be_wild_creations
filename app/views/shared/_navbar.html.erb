@@ -10,15 +10,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to '#', class: "nav-link" do %>
+              <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <% end %>
           </li>
           <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+          <a href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+            <i class="fa-solid fa-user fa-xl"></i>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
@@ -28,13 +27,13 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to new_user_session_path, class: "nav-link" do %>
-              <i class="fa-solid fa-user fa-xl"></i>
+            <%= link_to '#', class: "nav-link" do %>
+              <i class="fa-solid fa-cart-shopping fa-xl"></i>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to '#', class: "nav-link" do %>
-              <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <%= link_to new_user_session_path, class: "nav-link" do %>
+              <i class="fa-solid fa-user-plus fa-xl"></i>
             <% end %>
           </li>
         <% end %>
