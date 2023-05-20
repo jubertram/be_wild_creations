@@ -4,4 +4,6 @@ class Product < ApplicationRecord
 
   # Validations
   validates :name, presence: true
+
+  TYPE = ["collier", "bracelet", "boucles d'oreille"]
 end
