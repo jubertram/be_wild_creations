@@ -5,23 +5,20 @@ ActiveAdmin.register Product do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :product_type, :name, :description, :price, :available, photos:[]
+  permit_params :name, :description, :available, photos:[]
 
   index do
     selectable_column
     column :name
-    column :product_type
     column :description
-    column :price
+
     column :available
     actions
   end
 
   form do |f|
     f.input :name, label: 'Nom'
-    f.input :product_type, collection: Product::TYPE, label: 'Type de produit'
     f.input :description
-    f.input :price, label: 'Prix'
     f.input :available, label: 'Disponible'
     f.input :photos, as: :file, input_html: { multiple: true }
     f.actions
