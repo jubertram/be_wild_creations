@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row py-4">
+    <div class="col-md-3"><%= image_tag @order.product.photos.first, width: '100%' %></div>
+    <div class="col">
+      <h1>Commande #<%= @order.id %><span class="badge bg-pill bg-primary"><%= @order.state %></span></h1>
+      <ul class="list-unstyled">
+        <li><strong>EFFECTUÉE LE</strong> <%= @order.created_at.to_date %></li>
+        <li><strong>PRODUIT</strong> <%= @order.product.name %></li>
+        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
+        </li>
+      </ul>
+      <p>Livraison estimée dans<strong>2 jours ouvrés</strong></p>
+    </div>
+  </div>
+</div>
