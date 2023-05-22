@@ -12,7 +12,7 @@
       <div class='grid-item'>
         <%= image_tag product.photo ? product.photo : product.photos.first %>
         <div><%= product.name %></div>
-        <div class='price'><%= product.price.to_s.split('.')[1] == '0' ? product.price.to_i : product.price %> CAD</div>
+        <div class='price'>CAD</div>
       </div>
       <% end %>
   <% end %>

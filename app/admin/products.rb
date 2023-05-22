@@ -5,13 +5,13 @@ ActiveAdmin.register Product do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :description, :available, photos:[]
+  permit_params :name, :description, :category_id, :available, photos:[]
 
   index do
     selectable_column
     column :name
     column :description
-
+    column :category.name
     column :available
     actions
   end
@@ -19,6 +19,7 @@ ActiveAdmin.register Product do
   form do |f|
     f.input :name, label: 'Nom'
     f.input :description
+    f.input :category, as: :select
     f.input :available, label: 'Disponible'
     f.input :photos, as: :file, input_html: { multiple: true }
     f.actions
