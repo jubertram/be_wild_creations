@@ -54,6 +54,7 @@ gem "sassc-rails"
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
+gem 'stripe_event'
 gem 'money-rails', '~> 1.12'
 gem 'stripe'
 gem "devise"
