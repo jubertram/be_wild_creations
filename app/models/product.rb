@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   # Relations
   belongs_to :category
+  # belongs_to :order
 
   # Cloudinary upload
   has_many_attached :photos

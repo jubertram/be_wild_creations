@@ -4,7 +4,7 @@
     <%= image_tag @product.photo ? @product.photo : @product.photos.first %>
     <div class='product-description'>
       <h2><%= @product.name %></h2>
-      <p><%= @product.description%></p>
+      <p><%= @product.description %></p>
       <h4><%= humanized_money_with_symbol(@product.price) %></h4>
       <%= form_with url: orders_path do %>
         <%= hidden_field_tag 'product_id', @product.id %>
